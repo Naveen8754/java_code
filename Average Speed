@@ -1,0 +1,18 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        String str2[]=str.split(" ");
+        float a=0,b=0;
+        Arrays.toString(str2);
+        for(int i=0;i<str2.length;i++)
+        {
+            String str3[]=str2[i].split("@");
+            a+=Float.valueOf(str3[0]);
+            b+=Float.valueOf(str3[1]);
+        }
+        System.out.printf("the %.2f kmph",a/b);
+	}
+}
