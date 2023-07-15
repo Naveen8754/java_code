@@ -1,0 +1,41 @@
+the runs scored by n batsmen of a cricket team is passed as the input to the program. 
+the program must print the name of the batsman who scored the highest runs.
+(you can assume that no two batsmen will be the top scorers).
+
+
+
+	import java.util.*;
+	public class Main
+{
+	public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+int a=sc.nextInt();
+int max=0;
+String bat=" ";
+for(int i=0;i<=a;i++)
+{
+String str=sc.nextLine();
+String name=" ";
+int run=0;
+String b[]=str.split(",");
+for(int j=0;j<b.length;j++)
+{
+if(j==0)
+{
+name=b[j];
+}
+else
+{
+run=Integer.parseInt(b[j]);
+}
+}
+if(run>max)
+{
+max=run;
+bat=name;
+}
+}
+System.out.print(bat);
+}
+}
+	
