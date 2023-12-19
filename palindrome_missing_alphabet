@@ -1,0 +1,32 @@
+/*input :
+malayaam
+output :l
+*/
+input :
+aviddva
+output :
+i
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        char[] characters = input.toCharArray();
+        int j = characters.length - 1;
+
+        for (int i = 0; i < characters.length; i++) {
+            if (characters[i] != characters[j]) {
+                if (characters[i] == characters[j - 1] && i != j - 1) {
+                    System.out.println(characters[j]);
+                    break;
+                } else {
+                    System.out.println(characters[i]);
+                    break;
+                }
+            }
+            j--;
+        }
+    }
+}
